@@ -8,4 +8,6 @@ import com.example.pojo.Doctor;
 public interface DoctorService {
 	public List<Doctor> findByUsernameAndPassword(Doctor doctor);
 	public Doctor registerDoctor(Doctor doctor);
+	public List<Doctor> getDoctorDetails();
+	public String setAvtTime(Doctor doctor);
 }

@@ -7,7 +7,7 @@ import com.example.pojo.Hospital;
 
 
 public interface HospitalService {
-public Hospital registerHospital(Hospital hospital);
+//public Hospital registerHospital(Hospital hospital);
 	
-	public List<Hospital> getHospital(Hospital hospital);
+	public List<Hospital> getAllHospital();
 }

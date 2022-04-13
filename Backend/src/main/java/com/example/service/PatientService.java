@@ -8,4 +8,8 @@ public interface PatientService
 {
 	public List<Patient> findByUsernameAndPassword(Patient patient);
 	public Patient registerPatient(Patient patient);
+    public List<Patient> getPatientDetails();
+	
+	
+	public String updateProfilePatient(Patient patient);
 }

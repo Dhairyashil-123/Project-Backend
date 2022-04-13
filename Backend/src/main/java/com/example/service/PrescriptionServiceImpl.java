@@ -16,16 +16,16 @@ public class PrescriptionServiceImpl implements PrescriptionService {
 	private PrescriptionDao prescriptionDao;
 
 	@Override
-	public Prescription registerPrescription(Prescription prescription) {
-		// TODO Auto-generated method stub
-		return prescriptionDao.save(prescription);
+	public List<Prescription> getPrescription(String username)
+	{
+		return prescriptionDao.getPrescriptionDetailsByUsername(username);
 	}
 
 	@Override
-	public List<Prescription> getPrescription(Prescription prescription) {
-		// TODO Auto-generated method stub
-		return prescriptionDao.findAll();
+	public Prescription setPrescription(Prescription prescription) {
+		return prescriptionDao.save(prescription);
 	}
+
 
 	
 }

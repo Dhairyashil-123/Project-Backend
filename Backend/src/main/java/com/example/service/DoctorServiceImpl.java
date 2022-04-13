@@ -30,4 +30,15 @@ public class DoctorServiceImpl implements DoctorService {
 		return doctorDao.save(doctor);
 	} 
 	
+	@Override
+	public List<Doctor> getDoctorDetails() {
+		return doctorDao.findAll();
+	} 
+	
+	@Override
+	public String setAvtTime(Doctor doctor) {
+		 doctorDao.save(doctor);
+		 return null;
+	} 
+	
 }

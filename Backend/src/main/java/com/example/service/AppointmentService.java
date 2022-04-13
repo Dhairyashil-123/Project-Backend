@@ -9,5 +9,5 @@ import com.example.pojo.Appointment;
 public interface AppointmentService {
 	public Appointment registerAppointment(Appointment appointment);
 	
-	public List<Appointment> getAppointment(Appointment appointment);
+	public List<Appointment> getAppointment();
 }

@@ -24,7 +24,20 @@ public class PatientServiceImpl implements PatientService
 	@Override
 	public Patient registerPatient(Patient patient) {
 		return patientDao.save(patient);
-	} 
+	}
+
+	@Override
+	public List<Patient> getPatientDetails() {
+		return patientDao.findAll();
+	}
+
+	@Override
+	public String updateProfilePatient(Patient patient)
+	{
+		 patientDao.save(patient);
+		 return "updated";
+	}
+
 	
 
 }

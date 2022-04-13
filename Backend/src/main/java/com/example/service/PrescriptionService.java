@@ -5,8 +5,8 @@ import java.util.List;
 import com.example.pojo.Prescription;
 
 public interface PrescriptionService {
-public Prescription registerPrescription(Prescription prescription);
+public Prescription setPrescription(Prescription prescription);
 	
-	public List<Prescription> getPrescription(Prescription prescription);
+	 List<Prescription> getPrescription(String username);
 	
 }

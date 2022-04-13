@@ -10,7 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "hospital")
 public class Hospital {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="hospid")
@@ -46,7 +45,7 @@ public class Hospital {
 	@Column(name="fees")
 	float fees;
 	
-	@Column(name="labavailable_or_not")
+	@Column(name="labavailable_OR_not")
 	String labavailable_or_not;
 	
 	@Column(name="email")

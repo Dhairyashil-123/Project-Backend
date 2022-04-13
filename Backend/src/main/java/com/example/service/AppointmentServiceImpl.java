@@ -23,7 +23,7 @@ public class AppointmentServiceImpl implements AppointmentService
 	}
 
 	@Override
-	public List<Appointment> getAppointment(Appointment appointment) {
+	public List<Appointment> getAppointment() {
 		// TODO Auto-generated method stub
 		return appointmentDao.findAll();
 	}

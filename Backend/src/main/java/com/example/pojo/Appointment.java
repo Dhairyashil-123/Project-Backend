@@ -2,8 +2,6 @@ package com.example.pojo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -11,13 +9,33 @@ import javax.persistence.Table;
 @Table(name = "appointment")
 public class Appointment {
 	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "appointmentid")
+	int appointmentId;
+	
+	@Column(name = "hospid")
+	int hospId;
+	
+	public int getAppointmentId() {
+		return appointmentId;
+	}
+
+	public void setAppointmentId(int appointmentId) {
+		this.appointmentId = appointmentId;
+	}
+
+	public int getHospId() {
+		return hospId;
+	}
+
+	public void setHospId(int hospId) {
+		this.hospId = hospId;
+	}
+
 	@Column(name ="DID")
 	int did;
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name ="pid")
 	int pid;
 	
@@ -30,8 +48,19 @@ public class Appointment {
 	@Column(name="fees")
 	float fees;
 	
-	@Column(name="appointmentDate")
+	@Column(name="appointmentdate")
 	String appointmentDate;
+	
+	@Column(name = "appointmenttype")
+	String appointmentType;
+	
+	public String getAppointmentType() {
+		return appointmentType;
+	}
+
+	public void setAppointmentType(String appointmentType) {
+		this.appointmentType = appointmentType;
+	}
 
 	public int getDid() {
 		return did;
@@ -81,22 +110,32 @@ public class Appointment {
 		this.appointmentDate = appointmentDate;
 	}
 
-	public Appointment(int did, int pid, String pname, String dname, float fees, String appointmentDate) {
+
+	
+
+	
+	
+	public Appointment(int appointmentId, int hospId, int did, int pid, String pname, String dname, float fees,
+			String appointmentDate, String appointmentType) {
 		super();
+		this.appointmentId = appointmentId;
+		this.hospId = hospId;
 		this.did = did;
 		this.pid = pid;
 		this.pname = pname;
 		this.dname = dname;
 		this.fees = fees;
 		this.appointmentDate = appointmentDate;
+		this.appointmentType = appointmentType;
 	}
 
 	@Override
 	public String toString() {
-		return "Appointment [did=" + did + ", pid=" + pid + ", pname=" + pname + ", dname=" + dname + ", fees=" + fees
-				+ ", appointmentDate=" + appointmentDate + "]";
+		return "Appointment [appointmentId=" + appointmentId + ", hospId=" + hospId + ", did=" + did + ", pid=" + pid
+				+ ", pname=" + pname + ", dname=" + dname + ", fees=" + fees + ", appointmentDate=" + appointmentDate
+				+ ", appointmentType=" + appointmentType + "]";
 	}
-	
+
 	public Appointment()
 	{
 		

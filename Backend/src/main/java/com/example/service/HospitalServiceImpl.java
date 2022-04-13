@@ -15,14 +15,14 @@ public class HospitalServiceImpl implements HospitalService
 	@Autowired
 	private HospitalDao hospitalDao;
 
-	@Override
-	public Hospital registerHospital(Hospital hospital) {
-		// TODO Auto-generated method stub
-		return hospitalDao.save(hospital);
-	}
+//	@Override
+//	public Hospital registerHospital(Hospital hospital) {
+//		// TODO Auto-generated method stub
+//		return hospitalDao.save(hospital);
+//	}
 
 	@Override
-	public List<Hospital> getHospital(Hospital hospital) {
+	public List<Hospital> getAllHospital() {
 		// TODO Auto-generated method stub
 		return hospitalDao.findAll();
 	}
